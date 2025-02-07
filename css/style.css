@@ -542,17 +542,6 @@ a[href*='tel'], a[href*='mailto'] {
 	margin-top: 20px;
 }
 
-#preloader {
-	/*... (other preloader styles)... */
-	animation: wave 2s ease-in-out infinite; /* Apply the waving animation */
-  }
-
-@keyframes wave {
-	0% { transform: translateY(0); } /* Start at the initial position */
-	50% { transform: translateY(-10px); } /* Move up 10 pixels */
-	100% { transform: translateY(0); } /* Return to the initial position */
-  }
-
 @keyframes iconClassic {
 	30% {
 		color: #151515;
