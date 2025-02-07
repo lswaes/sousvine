@@ -64,6 +64,25 @@
 			});
 		}
 
+		// WAVING
+		const preloader = document.querySelector('.preloader');
+
+		// Waving effect using setInterval
+		let wavePosition = 10; // Initial position of the wave
+		const waveSpeed = 10; // Speed of the wave movement (milliseconds)
+		const waveAmplitude = 1; // Amplitude of the wave (pixels)
+	
+		const waveEffect = setInterval(() => {
+			preloader.style.transform = `translateY(${wavePosition}px)`; // Apply the wave movement
+	
+			wavePosition += 2; // Increment the wave position
+	
+			// Reverse the wave direction when it reaches the amplitude
+			if (wavePosition >= waveAmplitude || wavePosition <= -waveAmplitude) {
+				waveSpeed *= -1; // Change the direction
+			}
+		}, waveSpeed);
+
 		// Isotope
 		if (plugins.isotope.length) {
 			for (var i = 0; i < plugins.isotope.length; i++) {
@@ -77,40 +96,8 @@
 				});
 			}
 		}
-		const preloader = document.querySelector('.preloader');
-
-		// const fadeEffect = setInterval(() => {
-		//   // if we don't set opacity 1 in CSS, then   //it will be equaled to "", that's why we   // check it
-		//   if (!preloader.style.opacity) {
-		// 	preloader.style.opacity = 1;
-		//   }
-		//   if (preloader.style.opacity > 0) {
-		// 	preloader.style.opacity -= 0.1;
-		//   } else {
-		// 	clearInterval(fadeEffect);
-		//   }
-		// }, 200);
-		
-		// window.addEventListener('load', fadeEffect);
 	});
-	// const preloader = document.querySelector('.preloader');
 
-	// const fadeEffect = setInterval(() => {
-	//   // if we don't set opacity 1 in CSS, then   //it will be equaled to "", that's why we   // check it
-	//   if (!preloader.style.opacity) {
-	// 	preloader.style.opacity = 1;
-	//   }
-	//   if (preloader.style.opacity > 0) {
-	// 	preloader.style.opacity -= 0.1;
-	//   } else {
-	// 	clearInterval(fadeEffect);
-	//   }
-	// }, 200);
-	
-	// window.addEventListener('load', fadeEffect);
-
-
-	// Initialize scripts that require a finished document
 	$(function () {
 		isNoviBuilder = window.xMode;
 
