@@ -65,7 +65,7 @@
 		}
 
 		// WAVING
-		const preloader = document.querySelector('.preloader');
+		const preloader = document.querySelector('.preloader img');
 
 		// Waving effect using setInterval
 		let wavePosition = 10; // Initial position of the wave
